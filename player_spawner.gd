@@ -25,3 +25,4 @@ func _process(delta: float) -> void:
 		return
 	add_child(unit)
 	unit.set_global_position(spawn_pos)
+	#unit.set_type($Queue.flush_one_unit())

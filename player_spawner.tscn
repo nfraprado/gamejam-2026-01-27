@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://c7qpsgro8ff7t" path="res://player_spawner.gd" id="1_6k3qi"]
 [ext_resource type="PackedScene" uid="uid://dy8v7muxnc5sa" path="res://unit.tscn" id="2_0qle8"]
+[ext_resource type="PackedScene" uid="uid://dhg3g6p3p2fg3" path="res://queue.tscn" id="3_kg5k4"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7dm0k"]
 size = Vector2(320, 20)
@@ -27,3 +28,5 @@ position = Vector2(79, 0)
 
 [node name="Lane5" type="Marker2D" parent="." unique_id=148018225]
 position = Vector2(144, -2)
+
+[node name="Queue" parent="." unique_id=1165457003 instance=ExtResource("3_kg5k4")]

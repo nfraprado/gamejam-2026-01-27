@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://dhg3g6p3p2fg3"]
+
+[ext_resource type="Script" uid="uid://dnaabv6m4833x" path="res://queue.gd" id="1_v6k7x"]
+
+[node name="Queue" type="Node2D" unique_id=1165457003]
+script = ExtResource("1_v6k7x")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1393816059]
+
+[connection signal="flush_one_unit" from="." to="." method="_on_flush_one_unit"]
