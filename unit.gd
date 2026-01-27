@@ -29,13 +29,13 @@ func init_unit(new_type, new_master):
 func set_type(type):
 	match type:
 		Type.ROCK:
-			$MeshInstance2D.texture = preload("res://rock.png")
+			$CharacterBody2D/MeshInstance2D.texture = preload("res://rock.png")
 			type = Type.ROCK
 		Type.PAPER:
-			$MeshInstance2D.texture = preload("res://paper.png")
+			$CharacterBody2D/MeshInstance2D.texture = preload("res://paper.png")
 			type = Type.PAPER
 		Type.SCISSORS:
-			$MeshInstance2D.texture = preload("res://scissors.png")
+			$CharacterBody2D/MeshInstance2D.texture = preload("res://scissors.png")
 			type = Type.SCISSORS
 
 func set_master(new_master):

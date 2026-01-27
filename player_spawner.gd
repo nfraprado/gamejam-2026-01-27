@@ -2,6 +2,9 @@ extends Area2D
 
 @export var unit_scene: PackedScene
 
+
+enum Type { ROCK, PAPER, SCISSORS }
+enum Master { PLAYER, ENEMY }
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	pass # Replace with function body.
@@ -25,4 +28,4 @@ func _process(delta: float) -> void:
 		return
 	add_child(unit)
 	unit.set_global_position(spawn_pos)
-	#unit.set_type($Queue.flush_one_unit())
+	unit.init_unit(randi()%Type.size(), Master.PLAYER)

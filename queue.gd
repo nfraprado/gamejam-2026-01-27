@@ -1,5 +1,7 @@
 extends Node2D
 
+
+
 const queue_size : int = 3
 
 enum Type { ROCK, PAPER, SCISSORS }
