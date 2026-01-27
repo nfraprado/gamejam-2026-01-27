@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://s2qidb3e6sd6"]
+
+[ext_resource type="Script" uid="uid://ci8riwf1q8bru" path="res://spawner.gd" id="1_yp5lu"]
+
+[node name="Spawner" type="Node2D" unique_id=1690881379]
+script = ExtResource("1_yp5lu")
+
+[node name="SpawnLane1" type="Marker2D" parent="." unique_id=1490248770]
+
+[node name="SpawnLane2" type="Marker2D" parent="." unique_id=1108920040]
+
+[node name="SpawnLane3" type="Marker2D" parent="." unique_id=762889639]
+
+[node name="SpawnLane4" type="Marker2D" parent="." unique_id=677053786]
+
+[node name="SpawnLane5" type="Marker2D" parent="." unique_id=1406857735]
+
+[node name="Timer" type="Timer" parent="." unique_id=504267637]
