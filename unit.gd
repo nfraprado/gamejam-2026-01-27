@@ -23,8 +23,8 @@ func _physics_process(delta: float) -> void:
 	$CharacterBody2D.move_and_slide()
 	
 func init_unit(new_type, new_master):
-	type = new_type
-	master = new_master
+	set_type(new_type)
+	set_master(new_master)
 	
 func set_type(type):
 	match type:
