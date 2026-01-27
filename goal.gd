@@ -1,0 +1,27 @@
+extends Area2D
+
+@export var unit_scene: PackedScene
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	var unit = unit_scene.instantiate()
+	var spawn_pos
+	if Input.is_action_pressed("SendLane1"):
+		spawn_pos = $Lane1.get_global_position()
+	elif Input.is_action_pressed("SendLane2"):
+		spawn_pos = $Lane2.get_global_position()
+	elif Input.is_action_pressed("SendLane3"):
+		spawn_pos = $Lane3.get_global_position()
+	elif Input.is_action_pressed("SendLane4"):
+		spawn_pos = $Lane4.get_global_position()
+	elif Input.is_action_pressed("SendLane5"):
+		spawn_pos = $Lane5.get_global_position()
+	else:
+		return
+	add_child(unit)
+	unit.set_global_position(spawn_pos)
