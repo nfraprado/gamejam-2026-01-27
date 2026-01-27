@@ -2,6 +2,9 @@ extends Node2D
 
 const queue_size : int = 3
 
+enum Type { ROCK, PAPER, SCISSORS }
+enum Master { PLAYER, ENEMY }
+
 var queue = []
 
 var cur_unit_type = 0
