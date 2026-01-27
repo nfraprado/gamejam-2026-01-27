@@ -38,4 +38,4 @@ func _on_timer_timeout() -> void:
 	var spawn_pos = lane_idx_to_marker(next_lane).get_global_position()
 	add_child(unit)
 	unit.set_global_position(spawn_pos)
-	unit.init_unit(next_unit_type, Master.ENE)
+	unit.init_unit(next_unit_type, Master.ENEMY)
