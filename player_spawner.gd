@@ -2,6 +2,7 @@ extends Area2D
 
 @export var unit_scene: PackedScene
 
+var debounced = true
 
 enum Type { ROCK, PAPER, SCISSORS }
 enum Master { PLAYER, ENEMY }
@@ -14,6 +15,8 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	var unit = unit_scene.instantiate()
 	var spawn_pos
+	if not debounced:
+		return
 	if Input.is_action_pressed("SendLane1"):
 		spawn_pos = $Lane1.get_global_position()
 	elif Input.is_action_pressed("SendLane2"):
@@ -29,3 +32,10 @@ func _process(delta: float) -> void:
 	add_child(unit)
 	unit.set_global_position(spawn_pos)
 	unit.init_unit(randi()%Type.size(), Master.PLAYER)
+	
+	$Timer.start()
+	debounced = false
+
+
+func _on_timer_timeout() -> void:
+	debounced = true
