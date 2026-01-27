@@ -1,12 +1,12 @@
-[gd_scene format=3 uid="uid://dfj8ris4krhkl"]
+[gd_scene format=3 uid="uid://cmwuriswo1rie"]
 
-[ext_resource type="Script" uid="uid://c7qpsgro8ff7t" path="res://goal.gd" id="1_6k3qi"]
+[ext_resource type="Script" uid="uid://c7qpsgro8ff7t" path="res://player_spawner.gd" id="1_6k3qi"]
 [ext_resource type="PackedScene" uid="uid://dy8v7muxnc5sa" path="res://unit.tscn" id="2_0qle8"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7dm0k"]
 size = Vector2(320, 20)
 
-[node name="Goal" type="Area2D" unique_id=29089795]
+[node name="PlayerSpawner" type="Area2D" unique_id=29089795]
 script = ExtResource("1_6k3qi")
 unit_scene = ExtResource("2_0qle8")
 
