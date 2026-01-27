@@ -1,9 +1,11 @@
 [gd_scene format=3 uid="uid://s2qidb3e6sd6"]
 
 [ext_resource type="Script" uid="uid://ci8riwf1q8bru" path="res://enemy_spawner.gd" id="1_yp5lu"]
+[ext_resource type="PackedScene" uid="uid://dy8v7muxnc5sa" path="res://unit.tscn" id="2_00s5r"]
 
 [node name="Spawner" type="Node2D" unique_id=1690881379]
 script = ExtResource("1_yp5lu")
+unit_scene = ExtResource("2_00s5r")
 
 [node name="Lane1" type="Marker2D" parent="." unique_id=1490248770]
 position = Vector2(-160, 0)
@@ -21,3 +23,6 @@ position = Vector2(89, -5)
 position = Vector2(188, -1)
 
 [node name="Timer" type="Timer" parent="." unique_id=504267637]
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
