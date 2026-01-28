@@ -3,6 +3,7 @@ extends Area2D
 @export var unit_scene: PackedScene
 
 var debounced = true
+var next_type = 0
 
 enum Type { ROCK, PAPER, SCISSORS }
 enum Master { PLAYER, ENEMY }
@@ -31,9 +32,8 @@ func _process(delta: float) -> void:
 		return
 	add_child(unit)
 	unit.set_global_position(spawn_pos)
-	var rng = randi()%Type.size()
-	unit.init_unit(rng, Master.PLAYER)
-	
+	unit.init_unit(next_type % 3, Master.PLAYER)
+	next_type += 1
 	$Timer.start()
 	debounced = false
 

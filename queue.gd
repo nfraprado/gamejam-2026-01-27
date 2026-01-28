@@ -1,7 +1,5 @@
 extends Node2D
 
-
-
 const queue_size : int = 3
 
 enum Type { ROCK, PAPER, SCISSORS }
@@ -17,16 +15,13 @@ signal flush_one_unit
 func _ready() -> void:
 	pass # Replace with function body.
 
-
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	pass
 
-
 func get_new_unit_type():
 	cur_unit_type = (cur_unit_type + 1) % 3
 	return cur_unit_type
-
 
 func _on_flush_one_unit() -> int:
 	var next = queue.pop_at(0)
