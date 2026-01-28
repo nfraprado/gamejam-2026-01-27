@@ -3,16 +3,53 @@
 [ext_resource type="PackedScene" uid="uid://cmwuriswo1rie" path="res://player_spawner.tscn" id="1_0xm2m"]
 [ext_resource type="PackedScene" uid="uid://s2qidb3e6sd6" path="res://enemy_spawner.tscn" id="2_h2yge"]
 [ext_resource type="Texture2D" uid="uid://by2mmvhl5k4d" path="res://background.png" id="3_h2yge"]
+[ext_resource type="Texture2D" uid="uid://byqdhsmr6onql" path="res://wall.png" id="4_1bvp3"]
 
 [node name="Main" type="Node2D" unique_id=645267586]
 
 [node name="PlayerSpawner" parent="." unique_id=29089795 instance=ExtResource("1_0xm2m")]
-position = Vector2(588, 632)
+position = Vector2(688, 996)
 
 [node name="EnemySpawner" parent="." unique_id=1690881379 instance=ExtResource("2_h2yge")]
-position = Vector2(588, 15)
+position = Vector2(688, 13)
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1862665704]
-z_index = -1
-position = Vector2(588, 317)
+[node name="Background" type="Sprite2D" parent="." unique_id=1862665704]
+z_index = -2
+position = Vector2(1754, 1245)
 texture = ExtResource("3_h2yge")
+
+[node name="Sprite2D2" type="Sprite2D" parent="." unique_id=2125932379]
+z_index = -1
+position = Vector2(62, 624)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("4_1bvp3")
+
+[node name="Sprite2D3" type="Sprite2D" parent="." unique_id=457776505]
+z_index = -1
+position = Vector2(307, 622)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("4_1bvp3")
+
+[node name="Sprite2D4" type="Sprite2D" parent="." unique_id=364314850]
+z_index = -1
+position = Vector2(546, 620)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("4_1bvp3")
+
+[node name="Sprite2D5" type="Sprite2D" parent="." unique_id=724941425]
+z_index = -1
+position = Vector2(805, 620)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("4_1bvp3")
+
+[node name="Sprite2D6" type="Sprite2D" parent="." unique_id=266872740]
+z_index = -1
+position = Vector2(1062, 619)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("4_1bvp3")
+
+[node name="Sprite2D7" type="Sprite2D" parent="." unique_id=1268431287]
+z_index = -1
+position = Vector2(1309, 621)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("4_1bvp3")

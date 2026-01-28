@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://dhg3g6p3p2fg3" path="res://queue.tscn" id="3_kg5k4"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7dm0k"]
-size = Vector2(320, 20)
+size = Vector2(1024, 20)
 
 [node name="PlayerSpawner" type="Area2D" unique_id=29089795]
 script = ExtResource("1_6k3qi")
@@ -15,18 +15,18 @@ unit_scene = ExtResource("2_0qle8")
 shape = SubResource("RectangleShape2D_7dm0k")
 
 [node name="Lane1" type="Marker2D" parent="." unique_id=319937776]
-position = Vector2(-160, 0)
+position = Vector2(-512, 0)
 
 [node name="Lane2" type="Marker2D" parent="." unique_id=752831547]
-position = Vector2(-80, 0)
+position = Vector2(-256, 0)
 
 [node name="Lane3" type="Marker2D" parent="." unique_id=1457174111]
 
 [node name="Lane4" type="Marker2D" parent="." unique_id=326321650]
-position = Vector2(80, 0)
+position = Vector2(256, 0)
 
 [node name="Lane5" type="Marker2D" parent="." unique_id=148018225]
-position = Vector2(160, 0)
+position = Vector2(512, 0)
 
 [node name="Queue" parent="." unique_id=1165457003 instance=ExtResource("3_kg5k4")]
 

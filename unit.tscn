@@ -7,7 +7,7 @@
 size = Vector2(32, 32)
 
 [sub_resource type="QuadMesh" id="QuadMesh_ctwoc"]
-size = Vector2(32, 32)
+size = Vector2(128, 128)
 
 [node name="Unit" type="Node2D" unique_id=1943694354]
 script = ExtResource("1_ctwoc")
