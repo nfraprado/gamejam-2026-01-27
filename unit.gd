@@ -63,7 +63,6 @@ func _on_area_2d_area_entered(area: Area2D) -> void:
 				enemy_unit.die()
 			2: #loses
 				$HitBad.play()
-				die()
 				
 
 func die():
@@ -90,3 +89,7 @@ func types_collision_outcomes(type1, type2):
 			elif type2 == Type.ROCK:
 				outcome = 2
 	return outcome
+
+
+func _on_hit_bad_finished() -> void:
+	die()
