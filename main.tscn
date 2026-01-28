@@ -7,12 +7,12 @@
 [node name="Main" type="Node2D" unique_id=645267586]
 
 [node name="PlayerSpawner" parent="." unique_id=29089795 instance=ExtResource("1_0xm2m")]
-position = Vector2(551, 608)
+position = Vector2(588, 632)
 
 [node name="EnemySpawner" parent="." unique_id=1690881379 instance=ExtResource("2_h2yge")]
-position = Vector2(534, 184)
+position = Vector2(588, 15)
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1862665704]
-visible = false
-position = Vector2(557, 290)
+z_index = -1
+position = Vector2(588, 317)
 texture = ExtResource("3_h2yge")

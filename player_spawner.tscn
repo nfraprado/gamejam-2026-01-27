@@ -15,19 +15,18 @@ unit_scene = ExtResource("2_0qle8")
 shape = SubResource("RectangleShape2D_7dm0k")
 
 [node name="Lane1" type="Marker2D" parent="." unique_id=319937776]
-position = Vector2(-136, -1)
+position = Vector2(-160, 0)
 
 [node name="Lane2" type="Marker2D" parent="." unique_id=752831547]
-position = Vector2(-79, 0)
+position = Vector2(-80, 0)
 
 [node name="Lane3" type="Marker2D" parent="." unique_id=1457174111]
-position = Vector2(-1, -1)
 
 [node name="Lane4" type="Marker2D" parent="." unique_id=326321650]
-position = Vector2(79, 0)
+position = Vector2(80, 0)
 
 [node name="Lane5" type="Marker2D" parent="." unique_id=148018225]
-position = Vector2(144, -2)
+position = Vector2(160, 0)
 
 [node name="Queue" parent="." unique_id=1165457003 instance=ExtResource("3_kg5k4")]
 

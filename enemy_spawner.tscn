@@ -11,16 +11,16 @@ unit_scene = ExtResource("2_00s5r")
 position = Vector2(-160, 0)
 
 [node name="Lane2" type="Marker2D" parent="." unique_id=1108920040]
-position = Vector2(-78, -2)
+position = Vector2(-80, 0)
 
 [node name="Lane3" type="Marker2D" parent="." unique_id=762889639]
-position = Vector2(-1, 1)
+position = Vector2(0, 1)
 
 [node name="Lane4" type="Marker2D" parent="." unique_id=677053786]
-position = Vector2(89, -5)
+position = Vector2(80, 0)
 
 [node name="Lane5" type="Marker2D" parent="." unique_id=1406857735]
-position = Vector2(188, -1)
+position = Vector2(160, 0)
 
 [node name="Timer" type="Timer" parent="." unique_id=504267637]
 autostart = true
