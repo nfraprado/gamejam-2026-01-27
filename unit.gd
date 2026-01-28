@@ -63,6 +63,7 @@ func _on_area_2d_area_entered(area: Area2D) -> void:
 				enemy_unit.die()
 			2: #loses
 				$HitBad.play()
+				set_visible(false)
 				
 
 func die():
