@@ -3,9 +3,15 @@
 [ext_resource type="Script" uid="uid://ci8riwf1q8bru" path="res://enemy_spawner.gd" id="1_yp5lu"]
 [ext_resource type="PackedScene" uid="uid://dy8v7muxnc5sa" path="res://unit.tscn" id="2_00s5r"]
 
-[node name="Spawner" type="Node2D" unique_id=1690881379]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ewhtn"]
+size = Vector2(1024, 20)
+
+[node name="EnemySpawner" type="Area2D" unique_id=1646156178]
 script = ExtResource("1_yp5lu")
 unit_scene = ExtResource("2_00s5r")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2034244183]
+shape = SubResource("RectangleShape2D_ewhtn")
 
 [node name="Lane1" type="Marker2D" parent="." unique_id=1490248770]
 position = Vector2(-512, 0)
@@ -25,4 +31,5 @@ position = Vector2(512, 0)
 [node name="Timer" type="Timer" parent="." unique_id=504267637]
 autostart = true
 
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

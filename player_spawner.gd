@@ -2,6 +2,8 @@ extends Area2D
 
 @export var unit_scene: PackedScene
 
+signal reached
+
 var debounced = true
 var next_type = 0
 
@@ -10,6 +12,7 @@ enum Master { PLAYER, ENEMY }
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	pass # Replace with function body.
+
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -47,3 +50,10 @@ func _process(delta: float) -> void:
 
 func _on_timer_timeout() -> void:
 	debounced = true
+
+
+func _on_area_entered(area: Area2D) -> void:
+	if area.get_parent().get_master() == Master.PLAYER:
+		return
+	emit_signal("reached")
+	area.get_parent().die()

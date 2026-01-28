@@ -1,12 +1,26 @@
 [gd_scene format=3 uid="uid://cly62m61b2snd"]
 
 [ext_resource type="PackedScene" uid="uid://cmwuriswo1rie" path="res://player_spawner.tscn" id="1_0xm2m"]
+[ext_resource type="Script" uid="uid://bbssu61ck3a4q" path="res://main.gd" id="1_lquwl"]
 [ext_resource type="PackedScene" uid="uid://s2qidb3e6sd6" path="res://enemy_spawner.tscn" id="2_h2yge"]
 [ext_resource type="Texture2D" uid="uid://by2mmvhl5k4d" path="res://background.png" id="3_h2yge"]
 [ext_resource type="Texture2D" uid="uid://byqdhsmr6onql" path="res://wall.png" id="4_1bvp3"]
 [ext_resource type="Texture2D" uid="uid://dsy3k178mbt26" path="res://next_preview.png" id="5_lquwl"]
 
+[sub_resource type="LabelSettings" id="LabelSettings_lquwl"]
+font_size = 45
+
+[sub_resource type="LabelSettings" id="LabelSettings_7mycd"]
+font_size = 45
+
+[sub_resource type="LabelSettings" id="LabelSettings_272bh"]
+font_size = 45
+
+[sub_resource type="LabelSettings" id="LabelSettings_5vw27"]
+font_size = 45
+
 [node name="Main" type="Node2D" unique_id=645267586]
+script = ExtResource("1_lquwl")
 
 [node name="PlayerSpawner" parent="." unique_id=29089795 instance=ExtResource("1_0xm2m")]
 position = Vector2(688, 996)
@@ -18,42 +32,49 @@ position = Vector2(688, 13)
 z_index = -2
 position = Vector2(1754, 1245)
 texture = ExtResource("3_h2yge")
+metadata/_edit_lock_ = true
 
 [node name="Wall1" type="Sprite2D" parent="." unique_id=2125932379]
 z_index = -1
 position = Vector2(62, 624)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("4_1bvp3")
+metadata/_edit_lock_ = true
 
 [node name="Wall2" type="Sprite2D" parent="." unique_id=457776505]
 z_index = -1
 position = Vector2(307, 622)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("4_1bvp3")
+metadata/_edit_lock_ = true
 
 [node name="Wall3" type="Sprite2D" parent="." unique_id=364314850]
 z_index = -1
 position = Vector2(546, 622)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("4_1bvp3")
+metadata/_edit_lock_ = true
 
 [node name="Wall4" type="Sprite2D" parent="." unique_id=724941425]
 z_index = -1
 position = Vector2(805, 620)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("4_1bvp3")
+metadata/_edit_lock_ = true
 
 [node name="Wall5" type="Sprite2D" parent="." unique_id=266872740]
 z_index = -1
 position = Vector2(1062, 619)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("4_1bvp3")
+metadata/_edit_lock_ = true
 
 [node name="Background2" type="Sprite2D" parent="." unique_id=1268431287]
 z_index = -1
 position = Vector2(1309, 621)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("4_1bvp3")
+metadata/_edit_lock_ = true
 
 [node name="NextPreviewHalo" type="Sprite2D" parent="." unique_id=1068687715]
 visibility_layer = 2
@@ -66,3 +87,45 @@ texture = ExtResource("5_lquwl")
 z_index = -1
 position = Vector2(67.5, 919.0249)
 scale = Vector2(0.09726688, 0.093956955)
+
+[node name="Label" type="Label" parent="." unique_id=882362731]
+offset_left = 14.0
+offset_top = 12.0
+offset_right = 142.0
+offset_bottom = 75.0
+text = "Good:"
+label_settings = SubResource("LabelSettings_lquwl")
+
+[node name="GoodScore" type="Label" parent="Label" unique_id=1997658811]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.3290001
+anchor_top = 1.3640001
+anchor_right = 1.3290001
+anchor_bottom = 1.3640001
+offset_left = -31.112015
+offset_top = -82.93201
+offset_right = 8.887985
+offset_bottom = -19.932007
+text = "0"
+label_settings = SubResource("LabelSettings_7mycd")
+
+[node name="Label2" type="Label" parent="." unique_id=1744324346]
+offset_left = 1239.0
+offset_top = 12.0
+offset_right = 1335.0
+offset_bottom = 75.0
+text = "Bad:"
+label_settings = SubResource("LabelSettings_272bh")
+
+[node name="BadScore" type="Label" parent="Label2" unique_id=1338094510]
+layout_mode = 0
+offset_left = 116.0
+offset_top = 3.0
+offset_right = 156.0
+offset_bottom = 66.0
+text = "0"
+label_settings = SubResource("LabelSettings_5vw27")
+
+[connection signal="reached" from="PlayerSpawner" to="." method="_on_player_spawner_reached"]
+[connection signal="reached" from="EnemySpawner" to="." method="_on_enemy_spawner_reached"]

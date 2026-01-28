@@ -7,6 +7,8 @@ const num_lanes = 5
 
 @export var unit_scene: PackedScene
 
+signal reached
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	pass # Replace with function body.
@@ -39,3 +41,10 @@ func _on_timer_timeout() -> void:
 	add_child(unit)
 	unit.set_global_position(spawn_pos)
 	unit.init_unit(next_unit_type, Master.ENEMY)
+
+
+func _on_area_entered(area: Area2D) -> void:
+	if area.get_parent().get_master() == Master.ENEMY:
+		return
+	emit_signal("reached")
+	area.get_parent().die()
