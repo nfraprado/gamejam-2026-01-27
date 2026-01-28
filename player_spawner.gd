@@ -34,6 +34,13 @@ func _process(delta: float) -> void:
 	unit.set_global_position(spawn_pos)
 	unit.init_unit(next_type % 3, Master.PLAYER)
 	next_type += 1
+	match next_type % 3:
+		0:
+			$"../NextPreview".texture = preload("res://rock.png")
+		1:
+			$"../NextPreview".texture = preload("res://paper.png")
+		2:
+			$"../NextPreview".texture = preload("res://scissors.png")
 	$Timer.start()
 	debounced = false
 
