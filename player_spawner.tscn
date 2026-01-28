@@ -31,7 +31,7 @@ position = Vector2(512, 0)
 [node name="Queue" parent="." unique_id=1165457003 instance=ExtResource("3_kg5k4")]
 
 [node name="Timer" type="Timer" parent="." unique_id=541217403]
-wait_time = 0.1
+wait_time = 0.25
 one_shot = true
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
