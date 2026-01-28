@@ -1,0 +1,213 @@
+[33mcommit 201b3b755aaa23f1df9a9b88df19bfb304b99530[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m)[m
+Merge: f4b47ca b94d3bf
+Author: lptd99 <lptd99@gmail.com>
+Date:   Tue Jan 27 23:46:51 2026 -0300
+
+    Merge branch 'main' of https://github.com/nfraprado/gamejam-2026-01-27
+
+[33mcommit b94d3bf81d90665e513e1a73fc188edcd57279cc[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: Nícolas F. R. A. Prado <n@nfraprado.net>
+Date:   Tue Jan 27 23:35:23 2026 -0300
+
+    Add scores
+
+[33mcommit f4b47cab45ffe0e7e74e914bae6d16f91df74789[m
+Author: lptd99 <lptd99@gmail.com>
+Date:   Tue Jan 27 23:20:47 2026 -0300
+
+    add sounds for goals
+
+[33mcommit 185ea76f0f9504814cde7c4af81463467dca63cf[m
+Author: lptd99 <lptd99@gmail.com>
+Date:   Tue Jan 27 23:12:27 2026 -0300
+
+    add next unit preview
+
+[33mcommit ee9560d08f42bb8434fbe4938aec705625d77acb[m
+Author: Nícolas F. R. A. Prado <n@nfraprado.net>
+Date:   Tue Jan 27 22:55:52 2026 -0300
+
+    Make unit invisible when queued do die
+
+[33mcommit 435d49d937ace31522b31d2f5ad4297993fc18c7[m
+Author: Nícolas F. R. A. Prado <n@nfraprado.net>
+Date:   Tue Jan 27 22:53:08 2026 -0300
+
+    Increase player spawner delay
+
+[33mcommit 9ecc3107c29b7205c407958952d958f556697839[m
+Author: Nícolas F. R. A. Prado <n@nfraprado.net>
+Date:   Tue Jan 27 22:52:16 2026 -0300
+
+    Change unit speed back to 500
+
+[33mcommit df4f4393ce394b661d8fe41d7a4ac3423616e9bf[m
+Merge: 697ec06 f55982e
+Author: lptd99 <lptd99@gmail.com>
+Date:   Tue Jan 27 22:52:57 2026 -0300
+
+    Msd
+    
+    rge branch 'main' of https://github.com/nfraprado/gamejam-2026-01-27
+
+[33mcommit 697ec0650661ad32b5e657c5b882ec50481ccb33[m
+Author: lptd99 <lptd99@gmail.com>
+Date:   Tue Jan 27 22:52:24 2026 -0300
+
+    fix player spawner queue
+
+[33mcommit f55982e3d02dba35d7b1ed7bbd52377ffa7313a2[m
+Author: Nícolas F. R. A. Prado <n@nfraprado.net>
+Date:   Tue Jan 27 22:49:24 2026 -0300
+
+    Fix bad sound not playing
+
+[33mcommit cafa239fa49a44ccad644b068fa825f1f29a71ea[m
+Author: lptd99 <lptd99@gmail.com>
+Date:   Tue Jan 27 22:45:01 2026 -0300
+
+    fix sound
+
+[33mcommit f07ffbe693026eb712c82c2ed31531d0bc76d195[m
+Author: lptd99 <lptd99@gmail.com>
+Date:   Tue Jan 27 22:42:09 2026 -0300
+
+    rename mystery sound, add sound players and play sounds on hit
+
+[33mcommit 2e80d37bbe79b2bcead3ac158736af68fcb62e97[m
+Author: Nícolas F. R. A. Prado <n@nfraprado.net>
+Date:   Tue Jan 27 22:40:02 2026 -0300
+
+    Add random sound
+
+[33mcommit 64f9c3fbf16147afcabce770216fffa76897a720[m
+Author: Nícolas F. R. A. Prado <n@nfraprado.net>
+Date:   Tue Jan 27 22:34:42 2026 -0300
+
+    Import real graphics
+
+[33mcommit de81af2f8b354abc77ea3c00fe2222196e1d0ff5[m
+Author: lptd99 <lptd99@gmail.com>
+Date:   Tue Jan 27 22:25:37 2026 -0300
+
+    add win-lose logic to units
+
+[33mcommit 67c70ff78d1fd573c95b4bc925578ab9f7bc89d4[m
+Author: Nícolas F. R. A. Prado <n@nfraprado.net>
+Date:   Tue Jan 27 21:48:19 2026 -0300
+
+    Add sounds
+
+[33mcommit 835e921ee49aceef9e11527f015139cd53264269[m
+Author: Nícolas F. R. A. Prado <n@nfraprado.net>
+Date:   Tue Jan 27 21:20:24 2026 -0300
+
+    Make player spawn timer delay quicker
+
+[33mcommit 743c0ab6aa00119fc0ad2701b764cfb9aa002f3b[m
+Author: Nícolas F. R. A. Prado <n@nfraprado.net>
+Date:   Tue Jan 27 21:19:35 2026 -0300
+
+    Align spawns
+
+[33mcommit e421ea12b4122b7bff640e9d3434369fb772e606[m
+Author: Nícolas F. R. A. Prado <n@nfraprado.net>
+Date:   Tue Jan 27 21:01:26 2026 -0300
+
+    Convert unit to Area2D
+
+[33mcommit 9727768feb0be43ddb2602914d3c2b4d8260ce8c[m
+Author: Nícolas F. R. A. Prado <n@nfraprado.net>
+Date:   Tue Jan 27 20:45:08 2026 -0300
+
+    Debounce player spawn
+
+[33mcommit 09573481e81946a88af2da18ea915705f0c6ee35[m
+Author: lptd99 <lptd99@gmail.com>
+Date:   Tue Jan 27 20:41:34 2026 -0300
+
+    a
+
+[33mcommit 3a2cc4f6c3e5a0d33c4319a3bba5f79384dea3a9[m
+Author: lptd99 <lptd99@gmail.com>
+Date:   Tue Jan 27 20:38:53 2026 -0300
+
+    fix spawning
+
+[33mcommit bda4720c02c3046a4b0e7da2fb9b59016ec51a09[m
+Author: lptd99 <lptd99@gmail.com>
+Date:   Tue Jan 27 20:33:57 2026 -0300
+
+    fix unit init and types
+
+[33mcommit 14e71bda90d5eae4d929ae2d1a2b5e3605d50e4c[m
+Author: Nícolas F. R. A. Prado <n@nfraprado.net>
+Date:   Tue Jan 27 20:25:05 2026 -0300
+
+    Fix typo
+
+[33mcommit bff16a65d51e798fdb7ffc54a49076f0fd4a68af[m
+Author: Nícolas F. R. A. Prado <n@nfraprado.net>
+Date:   Tue Jan 27 20:16:31 2026 -0300
+
+    Autospawn enemies
+
+[33mcommit 58a921bf1fb473a5296b686f1baa6ea59f27563e[m
+Author: lptd99 <lptd99@gmail.com>
+Date:   Tue Jan 27 20:10:35 2026 -0300
+
+    fix init_unit no calling other functions
+
+[33mcommit fbd98afdab3b4dafc56215ced01401b6ade5b57c[m
+Author: lptd99 <lptd99@gmail.com>
+Date:   Tue Jan 27 19:56:53 2026 -0300
+
+    rename stone to rock and add unit movement and type/master settings
+
+[33mcommit fd2e73aa9f7b9e8dee40d5085797b2e6b6b898c7[m
+Author: Nícolas F. R. A. Prado <n@nfraprado.net>
+Date:   Tue Jan 27 19:53:37 2026 -0300
+
+    Create barebones queue
+
+[33mcommit eda4454480aa0b9b6ea349e7576ff93881481701[m
+Author: Nícolas F. R. A. Prado <n@nfraprado.net>
+Date:   Tue Jan 27 19:12:07 2026 -0300
+
+    Rename spawner to enemy spawner
+
+[33mcommit 525c0d0b45e1390a48685d6f2a575275b9f2d75b[m
+Author: Nícolas F. R. A. Prado <n@nfraprado.net>
+Date:   Tue Jan 27 18:57:15 2026 -0300
+
+    Rename goal to player spawner
+
+[33mcommit 44eaefa479bee018adecda6267a3491367f2fe07[m
+Author: Nícolas F. R. A. Prado <n@nfraprado.net>
+Date:   Tue Jan 27 18:51:01 2026 -0300
+
+    Spawn player units on key press
+
+[33mcommit 30db6c19ed40715fbbfb188dad37c475dfa2fa0b[m
+Author: lptd99 <lptd99@gmail.com>
+Date:   Tue Jan 27 18:18:37 2026 -0300
+
+    add img .import files for engine
+
+[33mcommit 94466c18694ded2530088a10a07aa23badd0d079[m
+Author: lptd99 <lptd99@gmail.com>
+Date:   Tue Jan 27 18:16:35 2026 -0300
+
+    add placeholder images
+
+[33mcommit e6d29142cc9f337ba2d6443d452250d11419f55d[m
+Author: Nícolas F. R. A. Prado <n@nfraprado.net>
+Date:   Tue Jan 27 18:14:14 2026 -0300
+
+    Dump
+
+[33mcommit c726264ea729b50e38d05a0173836de21d711b46[m
+Author: Nícolas F. R. A. Prado <n@nfraprado.net>
+Date:   Tue Jan 27 17:54:52 2026 -0300
+
+    Initial commit

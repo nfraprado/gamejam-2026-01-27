@@ -8,6 +8,8 @@ var type
 var speed = 500
 var master
 
+signal combat_kill
+
 @onready var area = $Area2D
 @onready var mesh = $Area2D/MeshInstance2D
 
@@ -61,6 +63,7 @@ func _on_area_2d_area_entered(area: Area2D) -> void:
 			1: #wins
 				$HitGood.play()
 				enemy_unit.die()
+				emit_signal("combat_kill")
 			2: #loses
 				$HitBad.play()
 				set_visible(false)

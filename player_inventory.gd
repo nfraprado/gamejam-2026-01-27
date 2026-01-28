@@ -1,5 +1,9 @@
 extends Node2D
 
+var scraps = 0
+var good = 0
+var bad = 0
+var max_units = 2
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -11,10 +15,7 @@ func _process(delta: float) -> void:
 	pass
 
 
-func _on_player_spawner_reached() -> void:
-	$Label2/BadScore.set_text(str(int($Label2/BadScore.get_text())+1))
-	
-
-
-func _on_enemy_spawner_reached() -> void:
-	$Label/GoodScore.set_text(str(int($Label/GoodScore.get_text())+1))
+func _on_player_spawner_combat_kill() -> void:
+	scraps += 1
+	$"../ScrapsLabel/ScrapsCount".set_text(str(scraps))
+	pass

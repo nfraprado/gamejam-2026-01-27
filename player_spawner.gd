@@ -3,6 +3,7 @@ extends Area2D
 @export var unit_scene: PackedScene
 
 signal reached
+signal combat_kill
 
 var debounced = true
 var next_type = 0
@@ -34,6 +35,7 @@ func _process(delta: float) -> void:
 	else:
 		return
 	add_child(unit)
+	unit.connect("combat_kill", handle_combat_kill, 0)
 	unit.set_global_position(spawn_pos)
 	unit.init_unit(next_type % 3, Master.PLAYER)
 	next_type += 1
@@ -47,13 +49,17 @@ func _process(delta: float) -> void:
 	$Timer.start()
 	debounced = false
 
-
+func handle_combat_kill():
+	print("combat kill")
+	emit_signal("combat_kill")
+	pass
+	
 func _on_timer_timeout() -> void:
 	debounced = true
-
 
 func _on_area_entered(area: Area2D) -> void:
 	if area.get_parent().get_master() == Master.PLAYER:
 		return
 	emit_signal("reached")
+	$ReachBad.play()
 	area.get_parent().die()

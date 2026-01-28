@@ -47,4 +47,5 @@ func _on_area_entered(area: Area2D) -> void:
 	if area.get_parent().get_master() == Master.ENEMY:
 		return
 	emit_signal("reached")
+	$ReachGood.play()
 	area.get_parent().die()

@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://ci8riwf1q8bru" path="res://enemy_spawner.gd" id="1_yp5lu"]
 [ext_resource type="PackedScene" uid="uid://dy8v7muxnc5sa" path="res://unit.tscn" id="2_00s5r"]
+[ext_resource type="AudioStream" uid="uid://co22yccmgc15s" path="res://ReachGood.wav" id="3_63vqd"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ewhtn"]
 size = Vector2(1024, 20)
@@ -30,6 +31,9 @@ position = Vector2(512, 0)
 
 [node name="Timer" type="Timer" parent="." unique_id=504267637]
 autostart = true
+
+[node name="ReachGood" type="AudioStreamPlayer2D" parent="." unique_id=874238979]
+stream = ExtResource("3_63vqd")
 
 [connection signal="area_entered" from="." to="." method="_on_area_entered"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
