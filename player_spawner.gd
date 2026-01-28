@@ -31,7 +31,8 @@ func _process(delta: float) -> void:
 		return
 	add_child(unit)
 	unit.set_global_position(spawn_pos)
-	unit.init_unit(randi()%Type.size(), Master.PLAYER)
+	var rng = randi()%Type.size()
+	unit.init_unit(rng, Master.PLAYER)
 	
 	$Timer.start()
 	debounced = false
