@@ -5,7 +5,7 @@ enum Type { ROCK, PAPER, SCISSORS }
 enum Master { PLAYER, ENEMY }
 
 var type
-var speed = 200
+var speed = 500
 var master
 
 @onready var area = $Area2D
