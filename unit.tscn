@@ -4,6 +4,7 @@
 [ext_resource type="Script" uid="uid://c8tw4x20etrco" path="res://unit.gd" id="1_ctwoc"]
 [ext_resource type="AudioStream" uid="uid://6ueaq7qe2ulg" path="res://Hit-good.wav" id="3_5wnup"]
 [ext_resource type="AudioStream" uid="uid://cgveuh4oc1bhg" path="res://Hit-bad.wav" id="4_1sk4h"]
+[ext_resource type="AudioStream" uid="uid://bjvqubmnwpfqy" path="res://Hit-convert.wav" id="5_1sk4h"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ctwoc"]
 size = Vector2(32, 32)
@@ -30,5 +31,6 @@ stream = ExtResource("3_5wnup")
 stream = ExtResource("4_1sk4h")
 
 [node name="HitConvert" type="AudioStreamPlayer2D" parent="." unique_id=348527712]
+stream = ExtResource("5_1sk4h")
 
 [connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
