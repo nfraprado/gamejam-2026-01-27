@@ -13,5 +13,6 @@ position = Vector2(551, 608)
 position = Vector2(534, 184)
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1862665704]
+visible = false
 position = Vector2(557, 290)
 texture = ExtResource("3_h2yge")
