@@ -7,7 +7,6 @@ enum Master { PLAYER, ENEMY }
 var type
 var speed = 200
 var master
-var _dead := false
 
 @onready var area = $Area2D
 @onready var mesh = $Area2D/MeshInstance2D
@@ -20,12 +19,12 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	var dir := -1.0 if master == Master.PLAYER else 1.0
 	position += Vector2(0, delta * speed * dir)
-	
-	
+
+
 func init_unit(new_type, new_master):
 	set_type(new_type)
 	set_master(new_master)
-	
+
 func set_type(new_type):
 	match new_type:
 		Type.ROCK:
@@ -40,17 +39,15 @@ func set_type(new_type):
 
 func set_master(new_master):
 	master = new_master
-	
+
 func get_master():
 	return master
-	
+
 func get_type():
 	return type
 
 func _on_area_2d_area_entered(area: Area2D) -> void:
 	if not area.get_parent().has_method("get_master"):
-		return
-	if not master == Master.PLAYER:
 		return
 	var enemy_unit = area.get_parent()
 	if master != enemy_unit.get_master():
@@ -59,20 +56,23 @@ func _on_area_2d_area_entered(area: Area2D) -> void:
 		print("outcome: ", outcome)
 		match outcome:
 			0: #draw
+				$HitConvert.play()
 				set_master(Master.ENEMY)
-				pass
 			1: #wins
+				$HitGood.play()
 				enemy_unit.die()
-				pass
 			2: #loses
+				$HitBad.play()
 				die()
-				pass
+				
 
 func die():
 	queue_free()
 
 func types_collision_outcomes(type1, type2):
 	var outcome = 0 # 0 = DRAW, 1 = FIRST WINS, 2 = FIRST LOSES
+	if not master == Master.PLAYER:
+		return
 	match type1:
 		Type.ROCK:
 			if type2 == Type.SCISSORS:

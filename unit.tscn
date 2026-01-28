@@ -2,6 +2,8 @@
 
 [ext_resource type="Texture2D" uid="uid://dq170myt0rpfy" path="res://paper.png" id="1_btf8p"]
 [ext_resource type="Script" uid="uid://c8tw4x20etrco" path="res://unit.gd" id="1_ctwoc"]
+[ext_resource type="AudioStream" uid="uid://6ueaq7qe2ulg" path="res://Hit-good.wav" id="3_5wnup"]
+[ext_resource type="AudioStream" uid="uid://cgveuh4oc1bhg" path="res://Hit-bad.wav" id="4_1sk4h"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ctwoc"]
 size = Vector2(32, 32)
@@ -20,5 +22,13 @@ shape = SubResource("RectangleShape2D_ctwoc")
 [node name="MeshInstance2D" type="MeshInstance2D" parent="Area2D" unique_id=2029818866]
 mesh = SubResource("QuadMesh_ctwoc")
 texture = ExtResource("1_btf8p")
+
+[node name="HitGood" type="AudioStreamPlayer2D" parent="." unique_id=153465004]
+stream = ExtResource("3_5wnup")
+
+[node name="HitBad" type="AudioStreamPlayer2D" parent="." unique_id=2038906660]
+stream = ExtResource("4_1sk4h")
+
+[node name="HitConvert" type="AudioStreamPlayer2D" parent="." unique_id=348527712]
 
 [connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
